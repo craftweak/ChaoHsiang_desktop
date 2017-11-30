@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Plato
+  m_Shader: {fileID: 4800000, guid: d160b6c1e10d92a49a7abeb5c40a755c, type: 3}
+  m_ShaderKeywords: _EMISSION _NORMALMAP
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlbedoMap:
+        m_Texture: {fileID: 2800000, guid: e64d7ee40dbb9414098f0376c8531bce, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: b11f4f98c696fe445bd60999ecdc92a6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BackMetallic: 0
+    - _BackSmoothness: 0
+    - _BumpScale: 1
+    - _Cutoff: 0
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.5
+    - _GlossyReflections: 1
+    - _HelixFreq: 2.39
+    - _HelixSlope: 2.77
+    - _HelixSpeed: 0.67
+    - _Metallic: 0.28
+    - _Mode: 0
+    - _NoiseAmp: 0.36
+    - _NoiseFreq: 1.06
+    - _NoiseSpeed: 0.06
+    - _NormalMapScale: 1
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _RandomSeed: 0
+    - _RotationAmp: 0
+    - _RotationFreq: 0.21
+    - _RotationSpeed: 1.28
+    - _ScaleAmp: 0
+    - _ScaleFreq: 0.5
+    - _ScaleSpeed: 1.3
+    - _Scroll: 0.5
+    - _Smoothness: 0.41
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SpikeAmp: 0.64
+    - _SpikeProb: 5.41
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _WaveAmp: 0.67
+    - _WaveFreq: -0.96
+    - _WaveSpeed: -0.48
+    - _Width: 0.25
+    - _ZWrite: 1
+    m_Colors:
+    - _AlbedoColor: {r: 1, g: 1, b: 1, a: 0.463}
+    - _BackColor: {r: 0.091, g: 0.091, b: 0.091, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

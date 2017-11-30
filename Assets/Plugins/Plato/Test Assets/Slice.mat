@@ -1,0 +1,113 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Slice
+  m_Shader: {fileID: 4800000, guid: d160b6c1e10d92a49a7abeb5c40a755c, type: 3}
+  m_ShaderKeywords: _DETAIL_MULX2 _EMISSION _NORMALMAP
+  m_LightmapFlags: 1
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlbedoMap:
+        m_Texture: {fileID: 2800000, guid: 46e24b8ee7aab0e43ba2b8d5803f69ae, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: b11f4f98c696fe445bd60999ecdc92a6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 2800000, guid: e7c8f6babcbf5432585a12bca5db858a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 2800000, guid: 684199260e0a142dc918d284088bd539, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 2800000, guid: 46e24b8ee7aab0e43ba2b8d5803f69ae, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _BackMetallic: 0.489
+    - _BackSmoothness: 0.605
+    - _BumpScale: 1
+    - _Cutoff: 0.56
+    - _DetailNormalMapScale: 0.4
+    - _DstBlend: 0
+    - _GlossMapScale: 1
+    - _Glossiness: 0.19
+    - _GlossyReflections: 1
+    - _HelixFreq: 24.22
+    - _HelixSlope: 10.1
+    - _HelixSpeed: 3.77
+    - _Metallic: 0
+    - _Mode: 0
+    - _NoiseAmp: 0
+    - _NoiseFreq: 0.3
+    - _NoiseSpeed: 0.5
+    - _NormalMapScale: 1
+    - _OcclusionStrength: 1
+    - _Parallax: 0.02
+    - _Param1: 0.45
+    - _Param2: 0.89
+    - _RandomSeed: 0.51
+    - _RotationAmp: 0
+    - _RotationFreq: 1.92
+    - _RotationSpeed: 0.3
+    - _ScaleAmp: 0
+    - _ScaleFreq: 1
+    - _ScaleSpeed: 1.82
+    - _Scroll: 0.24
+    - _Smoothness: 0.342
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SpikeAmp: 8.12
+    - _SpikeProb: 1.28
+    - _SrcBlend: 1
+    - _UVSec: 0
+    - _WaveAmp: 0
+    - _WaveFreq: 0
+    - _WaveSpeed: 8
+    - _Width: 0.64
+    - _ZWrite: 1
+    m_Colors:
+    - _AlbedoColor: {r: 1.0999999, g: 1.0999999, b: 1.0999999, a: 1}
+    - _Axis: {r: 0.4, g: 1, b: 0, a: 0}
+    - _BackColor: {r: 0.403, g: 0.403, b: 0.403, a: 1}
+    - _Color: {r: 0.64705884, g: 0.64705884, b: 0.64705884, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
