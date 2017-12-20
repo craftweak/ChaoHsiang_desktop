@@ -1,6 +1,10 @@
+v1.4.6.1
+=============
+Bug Fix: (Unity 2017.2) Additional fixes for issue with rotation curves. Hopefully this is the last!
+
 v1.4.6.0
 =============
-Bug Fix: (Unity 2017.2) Fixed issue with rotation curves that prevented having keyframes go beyond 360 degrees.
+Bug Fix: (Unity 2017.2) Fixes for issue with rotation curves that prevented having keyframes go beyond 360 degrees.
 Bug Fix: Updated code for Unity 2017.
 Added: Updated our 3rd Party support for Cinemachine 2.
 Added: User-submitted Crossfade event, found under the Third Party folder.

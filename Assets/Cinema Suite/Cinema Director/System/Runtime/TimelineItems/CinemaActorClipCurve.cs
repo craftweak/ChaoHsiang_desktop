@@ -132,6 +132,14 @@ namespace CinemaDirector
             object value = null;
             if (isProperty)
             {
+//#if UNITY_2017_2_OR_NEWER
+//                // Deal with a special case, use the new TransformUtils to get the rotation value from the editor field.
+//                if(type == typeof(Transform) && propertyName == "localEulerAngles")
+//                {
+//                    value = UnityEditor.TransformUtils.GetInspectorRotation(component.transform);
+//                    return value;
+//                }
+//#endif
                 PropertyInfo propertyInfo = ReflectionHelper.GetProperty(type, propertyName);
                 value = propertyInfo.GetValue(component, null);
             }
@@ -212,6 +220,9 @@ namespace CinemaDirector
                         catch (ArgumentException){fieldInfo.SetValue(component, Mathf.RoundToInt((float)value));}
                     }
                 }
+
+                if (CurveData[0].PropertyName == "localEulerAngles")
+                    Actor.transform.hasChanged = false;
             }
         }
 

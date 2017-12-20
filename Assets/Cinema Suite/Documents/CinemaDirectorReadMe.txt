@@ -1,4 +1,4 @@
-Cinema Director v1.4.5.4
+Cinema Director v1.4.7.0
 Always back up your project before updating!
 ===========================
 

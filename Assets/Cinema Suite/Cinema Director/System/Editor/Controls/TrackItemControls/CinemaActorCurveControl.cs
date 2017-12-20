@@ -12,6 +12,10 @@ public class CinemaActorCurveControl : CinemaCurveControl
     private const float QUATERNION_THRESHOLD = 0.5f;
     private bool hasUserInteracted = false;
 
+    //Rotation Special Case
+    private bool currentlyEditingRotation = false;
+    private CinemaActorClipCurve clipCurve;
+
     public override void UpdateCurveWrappers(CinemaClipCurveWrapper clipWrapper)
     {
         base.UpdateCurveWrappers(clipWrapper);
@@ -122,6 +126,24 @@ public class CinemaActorCurveControl : CinemaCurveControl
                 Component component = clipCurve.Actor.GetComponent(data.Type);
                 object value = clipCurve.GetCurrentValue(component, data.PropertyName, data.IsProperty);
 
+                //Specific hard-coded fix for the Rotation Curve Issue.
+                currentlyEditingRotation = data.PropertyName == "localEulerAngles";
+#if UNITY_2017_2_OR_NEWER
+                if (component != null)
+                {
+                    Type type = component.GetType();
+                    value = null;
+                    if (data.IsProperty)
+                    {
+                        // Deal with a special case, use the new TransformUtils to get the rotation value from the editor field.
+                        if (type == typeof(Transform) && data.PropertyName == "localEulerAngles")
+                        {
+                            value = UnityEditor.TransformUtils.GetInspectorRotation(component.transform);
+                        }
+                    }
+                }
+#endif
+
                 PropertyTypeInfo typeInfo = data.PropertyType;
 
                 if (typeInfo == PropertyTypeInfo.Int || typeInfo == PropertyTypeInfo.Long)
@@ -145,15 +167,20 @@ public class CinemaActorCurveControl : CinemaCurveControl
                 }
                 else if (typeInfo == PropertyTypeInfo.Vector3)
                 {
-                    Vector3 vec3 = (Vector3)value;
-                    float curve1Value = data.Curve1.Evaluate(state.ScrubberPosition);
-                    float curve2Value = data.Curve2.Evaluate(state.ScrubberPosition);
-                    float curve3Value = data.Curve3.Evaluate(state.ScrubberPosition);
+                    //Special check for rotations
+                    if (!currentlyEditingRotation || (currentlyEditingRotation && component.transform.hasChanged))
+                    {
+                        Vector3 vec3 = (Vector3)value;
+                        float curve1Value = data.Curve1.Evaluate(state.ScrubberPosition);
+                        float curve2Value = data.Curve2.Evaluate(state.ScrubberPosition);
+                        float curve3Value = data.Curve3.Evaluate(state.ScrubberPosition);
 
-                    hasDifferenceBeenFound |= addKeyOnUserInteraction(vec3.x, curve1Value, data.Curve1, state.ScrubberPosition);
-                    hasDifferenceBeenFound |= addKeyOnUserInteraction(vec3.y, curve2Value, data.Curve2, state.ScrubberPosition);
-                    hasDifferenceBeenFound |= addKeyOnUserInteraction(vec3.z, curve3Value, data.Curve3, state.ScrubberPosition);
-                    
+                        hasDifferenceBeenFound |= addKeyOnUserInteraction(vec3.x, curve1Value, data.Curve1, state.ScrubberPosition);
+                        hasDifferenceBeenFound |= addKeyOnUserInteraction(vec3.y, curve2Value, data.Curve2, state.ScrubberPosition);
+                        hasDifferenceBeenFound |= addKeyOnUserInteraction(vec3.z, curve3Value, data.Curve3, state.ScrubberPosition);
+
+                    }
+
                 }
                 else if (typeInfo == PropertyTypeInfo.Vector4)
                 {
