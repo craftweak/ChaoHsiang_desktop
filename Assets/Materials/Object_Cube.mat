@@ -7,8 +7,8 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Object_Cube
-  m_Shader: {fileID: 4800000, guid: 55815e818dd850d419be032c5b4bd763, type: 3}
-  m_ShaderKeywords: V_WIRE_FRESNEL_OFF V_WIRE_LIGHT_ON V_WIRE_TRANSPARENCY_OFF V_WIRE_TRY_QUAD_ON
+  m_Shader: {fileID: 4800000, guid: ca4e0ff2bddef70428c0cacff03722e6, type: 3}
+  m_ShaderKeywords: V_WIRE_FRESNEL_ON V_WIRE_LIGHT_ON V_WIRE_TRANSPARENCY_OFF V_WIRE_TRY_QUAD_ON
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -90,8 +90,8 @@ Material:
     - _V_WIRE_Ao: 0
     - _V_WIRE_AoStrength: 1
     - _V_WIRE_BumpEnumID: 0
-    - _V_WIRE_DistanceFade: 0
-    - _V_WIRE_DistanceFadeEnd: 10
+    - _V_WIRE_DistanceFade: 1
+    - _V_WIRE_DistanceFadeEnd: 800
     - _V_WIRE_DistanceFadeStart: 5
     - _V_WIRE_DynamicGI: 0
     - _V_WIRE_DynamicGIEnumID: 0
@@ -102,10 +102,10 @@ Material:
     - _V_WIRE_DynamicMaskInvert: -1
     - _V_WIRE_DynamicMaskSmooth: 1
     - _V_WIRE_DynamicMaskType: 1
-    - _V_WIRE_EmissionStrength: 0
+    - _V_WIRE_EmissionStrength: 1
     - _V_WIRE_FixedSize: 0
-    - _V_WIRE_FresnelBias: 0
-    - _V_WIRE_FresnelEnumID: 0
+    - _V_WIRE_FresnelBias: 0.5
+    - _V_WIRE_FresnelEnumID: 1
     - _V_WIRE_FresnelInvert: 0
     - _V_WIRE_FresnelPow: 1
     - _V_WIRE_ImprovedBlendEnumID: 0
@@ -130,7 +130,7 @@ Material:
     - _V_WIRE_WireVertexColor: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _V_WIRE_Color: {r: 0.472, g: 0.472, b: 0.472, a: 1}
     - _V_WIRE_MainTex_Scroll: {r: 0, g: 0, b: 0, a: 0}

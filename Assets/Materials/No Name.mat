@@ -91,9 +91,9 @@ Material:
     - _V_WIRE_Ao: 0
     - _V_WIRE_AoStrength: 1
     - _V_WIRE_BumpEnumID: 0
-    - _V_WIRE_DistanceFade: 0
-    - _V_WIRE_DistanceFadeEnd: 10
-    - _V_WIRE_DistanceFadeStart: 5
+    - _V_WIRE_DistanceFade: 1
+    - _V_WIRE_DistanceFadeEnd: 800
+    - _V_WIRE_DistanceFadeStart: 0
     - _V_WIRE_DynamicGI: 0
     - _V_WIRE_DynamicGIEnumID: 0
     - _V_WIRE_DynamicGIStrength: 0
@@ -105,7 +105,7 @@ Material:
     - _V_WIRE_DynamicMaskType: 1
     - _V_WIRE_EmissionStrength: 0
     - _V_WIRE_FixedSize: 0
-    - _V_WIRE_FresnelBias: 0
+    - _V_WIRE_FresnelBias: -0.5
     - _V_WIRE_FresnelEnumID: 1
     - _V_WIRE_FresnelInvert: 0
     - _V_WIRE_FresnelPow: 1
