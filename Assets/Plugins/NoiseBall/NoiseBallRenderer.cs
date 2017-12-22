@@ -40,8 +40,18 @@ namespace NoiseBall
         [SerializeField, ColorUsage(false, true, 0, 8, 0.125f, 3)]
         Color _lineColor = Color.white;
 
+        public Color lineColor {
+		get { return _lineColor; }
+		set { _lineColor = value; }
+	    }
+
         [SerializeField, ColorUsage(false)]
         Color _surfaceColor = Color.white;
+
+        public Color surfaceColor {
+		get { return _surfaceColor; }
+		set { _surfaceColor = value; }
+	    }
 
         [SerializeField, Range(0, 1)]
         float _metallic = 0.5f;
